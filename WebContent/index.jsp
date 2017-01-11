@@ -8,6 +8,11 @@
 </head>
 <body>
 hi this from openshift
+    
+    <%
+   out.println("hello"+$(env.MYSQL_USER));
+    
+    %>
 
 </body>
 </html>
