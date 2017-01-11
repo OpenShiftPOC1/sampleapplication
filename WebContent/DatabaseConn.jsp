@@ -11,7 +11,7 @@
 <%
 
 String url = "jdbc:mysql://" 
-              + System.getenv().get("OPENSHIFT_MYSQL_DB_HOST") 
+              + "mysql"
               + ":" 
               + "3306"
               + "/sampledb";
