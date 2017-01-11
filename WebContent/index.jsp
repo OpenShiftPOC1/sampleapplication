@@ -8,13 +8,7 @@
 </head>
 <body>
 hi this from openshift
-    
-    <%
-   out.println("hello"+$(env.MYSQL_USER));
-   out.println("hello"+$(url + username + password));
-    
-    %>
-    
+
     
 <%= $(env.MYSQL_USER)  %>
 
