@@ -16,10 +16,10 @@ String url = "jdbc:mysql://"
               + "3306"
               + "/sampledb";
 			  
-String username = System.getenv().get("OPENSHIFT_MYSQL_DB_USERNAME");
-String password =System.getenv().get("OPENSHIFT_MYSQL_DB__PASSWORD"); 
+String username = System.getenv().get("env.OPENSHIFT_MYSQL_DB_USERNAME");
+String password =System.getenv().get("env.OPENSHIFT_MYSQL_DB__PASSWORD"); 
 Class.forName("com.mysql.jdbc.Driver"); 
-java.sql.Connection con = DriverManager.getConnection(url,"admin","root"); 
+java.sql.Connection con = DriverManager.getConnection(url,username,password); 
 Statement st= con.createStatement(); 
 ResultSet rs=st.executeQuery("select * from users"); 
 while(rs.next())
