@@ -13,7 +13,7 @@
 String url = "jdbc:mysql://" 
               + System.getenv().get("OPENSHIFT_MYSQL_DB_HOST") 
               + ":" 
-              + System.getenv().get("OPENSHIFT_MYSQL_DB_PORT") 
+              + "3306"
               + "/sampledb";
 			  
 String username = System.getenv().get("OPENSHIFT_MYSQL_DB_USERNAME");
