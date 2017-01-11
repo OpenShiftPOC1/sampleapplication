@@ -19,6 +19,8 @@ String url = "jdbc:mysql://"
 String username = System.getenv().get("OPENSHIFT_MYSQL_DB_USERNAME");
 String password =System.getenv().get("OPENSHIFT_MYSQL_DB__PASSWORD"); 
  
+ out.print(username);
+ <%= url%>
 java.sql.Connection con = DriverManager.getConnection(url,username,password); 
 Statement st= con.createStatement(); 
 ResultSet rs=st.executeQuery("select * from users"); 
