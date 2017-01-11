@@ -6,7 +6,7 @@
 <body>
 <table border="2">
 
-
+  
 
 <%
 Class.forName("com.mysql.jdbc.Driver"); 
