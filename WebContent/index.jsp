@@ -10,7 +10,7 @@
 hi this from openshift
 
     
-<%= $(env.MYSQL_USER)  %>
+
 
 </body>
 </html>
