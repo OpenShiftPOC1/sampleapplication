@@ -9,15 +9,19 @@
   
 
 <%
-
+String host = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
+String port = System.getenv("OPENSHIFT_MYSQL_DB_PORT");
+String username = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+String password = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
 String url = "jdbc:mysql://" 
-              + "mysql"
+              + host
               + ":" 
-              + "3306"
+              + port
               + "/sampledb";
-			  
-String username = System.getenv().get("env.OPENSHIFT_MYSQL_DB_USERNAME");
-String password =System.getenv().get("env.OPENSHIFT_MYSQL_DB__PASSWORD"); 
+
+out.println(url + username + password);
+
+
 Class.forName("com.mysql.jdbc.Driver"); 
 java.sql.Connection con = DriverManager.getConnection(url,username,password); 
 Statement st= con.createStatement(); 
